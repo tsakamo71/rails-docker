@@ -1,7 +1,7 @@
 FROM centos:centos7
  
 RUN yum -y update
-RUN yum -y install gcc git tar openssl openssl-devel bzip2 readline-devel
+RUN yum -y install gcc gcc-c++ git tar openssl openssl-devel bzip2 readline-devel zip unzip sqlite-devel
  
 # rbenvのインストール
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
