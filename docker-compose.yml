@@ -5,4 +5,14 @@ services:
     build: .
     tty: true
     volumes:
-      - ./development:/development
+      - ./app:/app
+    links:
+      - postgresql
+    environment:
+      POSTGRE_SQL_HOST: postgresql
+  postgresql:
+    image: 'postgres:11.10'
+    environment:
+      POSTGRES_USER: 'root'
+      POSTGRES_PASSWORD: 'password'
+
