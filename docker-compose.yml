@@ -8,6 +8,8 @@ services:
       - ./app:/app
     links:
       - postgresql
+    ports:
+      - '3000:3000'
     environment:
       POSTGRE_SQL_HOST: postgresql
   postgresql:
